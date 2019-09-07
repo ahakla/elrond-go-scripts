@@ -21,6 +21,10 @@ if ! [ -x "$(command -v go)" ];
       #Get the latest version of GO for amd64 & installing it
       echo -e "${RED}GO is not installed on your system${NC}"  
       GO_LATEST=$(curl -sS https://golang.org/VERSION?m=text)
+
+      #temporary patch for incompatibilty with go1.13
+      GO_LATEST='go1.12.9'
+
       echo -e
       echo -e "${GREEN}The latest version Go is:${CYAN}$GO_LATEST${NC}"
       echo -e "${GREEN}Installing it now...${NC}"
