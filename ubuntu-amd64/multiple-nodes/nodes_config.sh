@@ -25,9 +25,9 @@ SESSION_PREFIX='node-'			# terminal multiplexer sessions will be named `node-01`
 ##################################################################################
 
 # define the code versions to be used
-ELRONDGO_VER='tags/v1.0.17'		# see https://github.com/ElrondNetwork/elrond-go/releases/latest
-ELRONDGO_BRANCH='development'		# default: 'master', could also by 'development', or another tag
-ELRONDCONFIG_VER='tags/testnet-1017'	# see https://github.com/ElrondNetwork/elrond-config/releases/latest
+ELRONDGO_VER='tags/v1.0.19'		# see https://github.com/ElrondNetwork/elrond-go/releases/latest
+ELRONDGO_BRANCH='master'		# default: 'master', could also by 'development', or another tag
+ELRONDCONFIG_VER='tags/testnet-1018'	# see https://github.com/ElrondNetwork/elrond-config/releases/latest
 ELRONDCONFIG_BRANCH='master'		# default: 'master', could also by 'development', or another tag
 
 # define where the backup pem key files for each node are (to be) stored
@@ -47,7 +47,7 @@ NODE_NAMES=('Alwin (1)' 'Alwin (2)')	# the array size should correspond with $NU
 # if the keys in $USE_KEYS are not found in the $BACKUP_ALLKEYS_FOLDER, they will be searched
 # in the existing node folders and copied to $BACKUP_ALLKEYS_FOLDER if necessary
 USE_KEYS=(86001ab0d380 22a5a948582d)	# use these existing pem key files (first 12 chars of initialNodesPk)
-KEEPDB_KEYS=(yes yes)			# keep existing /db folders? (default: yes)
+KEEPDB_KEYS=(no no)			# keep existing /db folders? (default: yes)
 KEEPLOGS_KEYS=(no no)			# keep existing /logs folders? (default: no)
 KEEPSTATS_KEYS=(no no)			# keep existing /stats folders? (default: no)
-CLEANUP=no				# within $ELROND_FOLDER, remove all unused node folder structures?
+CLEANUP=yes				# within $ELROND_FOLDER, remove all unused node folder structures?
