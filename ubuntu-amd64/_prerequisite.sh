@@ -3,4 +3,4 @@
 sudo apt update && sudo apt dist-upgrade -y
 
 #install some dependencies
-sudo apt install -y git curl screen tmux
+sudo apt install -y git curl screen tmux build-essential
